@@ -12,7 +12,7 @@ const MainPage = () => {
   const [showNotification, setShowNotification] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState("");
 
-  const cities = ["القاهرة", "الاسكندرية", "جيزة", "الاقصر", "اسوان"];
+  const cities = ["القاهرة", "الاسكندرية", "الجيزة", "الاقصر", "اسوان"];
 
   const prayerList = [
     { key: "Fajr", name: "الفجر" },
@@ -147,17 +147,23 @@ const MainPage = () => {
         </div>
 
         <div className="mb-4">
-          <select
-            className="w-full bg-green-700/80 text-white py-2 px-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition-all"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          >
-            {cities.map((cityName) => (
-              <option key={cityName} value={cityName}>
-                {cityName}
-              </option>
-            ))}
-          </select>
+          <div className="relative w-full">
+            <select
+              className="w-full bg-green-700/80 text-white py-2 px-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition-all"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              onFocus={(e) =>
+                (e.target.size = cities.length > 5 ? 5 : cities.length)
+              }
+              onBlur={(e) => (e.target.size = 1)}
+            >
+              {cities.map((cityName) => (
+                <option key={cityName} value={cityName}>
+                  {cityName}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
 
         <div className="space-y-2">
