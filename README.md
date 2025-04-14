@@ -27,6 +27,28 @@ A comprehensive web application designed to assist Muslims in their daily life b
 - Built with modern technologies to ensure quick performance and a seamless experience.
 
 ## Installation:
-1. Clone the repo:
+Clone the repository:
    ```bash
    git clone https://github.com/yossefmahmoud1/Muslim-website.git
+   ```
+## Install dependencies:
+Clone the repository: 
+```bash
+
+npm install
+
+   ```
+## Start the application:
+Clone the repository:  
+```bash
+
+npm start
+
+   ```
+Open the app in your browser at: http://localhost:3000
+
+## Contributing:
+Feel free to fork the project and submit pull requests for improvements.
+
+## Contact:
+For any questions or suggestions, reach out to me at omaryosef136@gmail.com.
